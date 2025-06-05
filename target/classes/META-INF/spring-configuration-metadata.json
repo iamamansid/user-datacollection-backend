@@ -1,0 +1,54 @@
+{
+  "groups": [
+    {
+      "name": "app",
+      "type": "com.example.backend.config.ApplicationConfig",
+      "sourceType": "com.example.backend.config.ApplicationConfig"
+    },
+    {
+      "name": "app.api",
+      "type": "com.example.backend.config.ApplicationConfig$Api",
+      "sourceType": "com.example.backend.config.ApplicationConfig",
+      "sourceMethod": "getApi()"
+    },
+    {
+      "name": "app.database",
+      "type": "com.example.backend.config.ApplicationConfig$Database",
+      "sourceType": "com.example.backend.config.ApplicationConfig",
+      "sourceMethod": "getDatabase()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.api.connection-timeout",
+      "type": "java.lang.Integer",
+      "description": "Connection timeout in milliseconds",
+      "sourceType": "com.example.backend.config.ApplicationConfig$Api"
+    },
+    {
+      "name": "app.api.read-timeout",
+      "type": "java.lang.Integer",
+      "description": "Read timeout in milliseconds",
+      "sourceType": "com.example.backend.config.ApplicationConfig$Api"
+    },
+    {
+      "name": "app.api.users-url",
+      "type": "java.lang.String",
+      "description": "Base URL for users API",
+      "sourceType": "com.example.backend.config.ApplicationConfig$Api"
+    },
+    {
+      "name": "app.database.autoload-data",
+      "type": "java.lang.Boolean",
+      "description": "Enable automatic loading of data on startup",
+      "sourceType": "com.example.backend.config.ApplicationConfig$Database"
+    },
+    {
+      "name": "app.database.max-records",
+      "type": "java.lang.Integer",
+      "description": "Maximum number of records to load",
+      "sourceType": "com.example.backend.config.ApplicationConfig$Database"
+    }
+  ],
+  "hints": []
+}
