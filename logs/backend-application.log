@@ -1,711 +1,189 @@
-2025-06-04 15:55:13.914  INFO 24096 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 11.0.26 on Aman-PC with PID 24096 (C:\Users\amans\Downloads\backend\backend\target\classes started by amans in C:\Users\amans\Downloads\backend\backend)
-2025-06-04 15:55:13.915 DEBUG 24096 --- [main] com.example.backend.BackendApplication   : Running with Spring Boot v2.7.18, Spring v5.3.31
-2025-06-04 15:55:13.916  INFO 24096 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-06-04 15:55:15.070  INFO 24096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-04 15:55:15.200  INFO 24096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 1 JPA repository interfaces.
-2025-06-04 15:55:16.594  INFO 24096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2025-06-04 15:55:16.606  INFO 24096 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-04 15:55:16.606  INFO 24096 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-2025-06-04 15:55:16.775  INFO 24096 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-04 15:55:16.776  INFO 24096 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2766 ms
-2025-06-04 15:55:16.858  INFO 24096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-04 15:55:17.256  INFO 24096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-04 15:55:17.268  INFO 24096 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2025-06-04 15:55:17.574  INFO 24096 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-04 15:55:17.654  INFO 24096 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2025-06-04 15:55:17.905  INFO 24096 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2025-06-04 15:55:18.040  INFO 24096 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2025-06-04 15:55:18.779  INFO 24096 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2025-06-04 15:55:18.801  INFO 24096 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-04 15:55:19.361  INFO 24096 --- [main] c.example.backend.config.UserDataLoader  : Starting initial data load from external API
-2025-06-04 15:55:19.361 DEBUG 24096 --- [main] c.example.backend.config.UserDataLoader  : Fetching data from URL: https://dummyjson.com/users
-2025-06-04 15:55:20.155  INFO 24096 --- [main] c.example.backend.config.UserDataLoader  : Successfully retrieved user data from API
-2025-06-04 15:55:20.156  INFO 24096 --- [main] c.example.backend.config.UserDataLoader  : Processed 30 users from external API
-2025-06-04 15:55:20.203  INFO 24096 --- [main] c.e.b.service.impl.UserServiceImpl       : Saving 30 users to database
-2025-06-04 15:55:20.370 DEBUG 24096 --- [main] c.e.b.service.impl.UserServiceImpl       : Successfully saved 30 users to database
-2025-06-04 15:55:20.370 DEBUG 24096 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserServiceImpl.saveAll executed in 201 ms
-2025-06-04 15:55:20.370  INFO 24096 --- [main] c.example.backend.config.UserDataLoader  : Successfully loaded all users into database
-2025-06-04 15:55:20.447  WARN 24096 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-04 15:55:20.994  INFO 24096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2025-06-04 15:55:21.007  INFO 24096 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 7.686 seconds (JVM running for 8.315)
-2025-06-04 15:55:21.011  INFO 24096 --- [main] com.example.backend.BackendApplication   : Backend Application started successfully
-2025-06-04 16:07:04.847  INFO 25564 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 11.0.26 on Aman-PC with PID 25564 (C:\Users\amans\Downloads\backend\backend\target\classes started by amans in C:\Users\amans\Downloads\backend\backend)
-2025-06-04 16:07:04.849 DEBUG 25564 --- [main] com.example.backend.BackendApplication   : Running with Spring Boot v2.7.18, Spring v5.3.31
-2025-06-04 16:07:04.849  INFO 25564 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-06-04 16:07:05.856  INFO 25564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-04 16:07:05.945  INFO 25564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 1 JPA repository interfaces.
-2025-06-04 16:07:07.185  INFO 25564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2025-06-04 16:07:07.195  INFO 25564 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-04 16:07:07.195  INFO 25564 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-2025-06-04 16:07:07.318  INFO 25564 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-04 16:07:07.318  INFO 25564 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2405 ms
-2025-06-04 16:07:07.362  INFO 25564 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-04 16:07:07.657  INFO 25564 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-04 16:07:07.669  INFO 25564 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2025-06-04 16:07:07.890  INFO 25564 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-04 16:07:07.950  INFO 25564 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2025-06-04 16:07:08.153  INFO 25564 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2025-06-04 16:07:08.280  INFO 25564 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2025-06-04 16:07:08.970  INFO 25564 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2025-06-04 16:07:08.983  INFO 25564 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-04 16:07:09.789  INFO 25564 --- [main] c.example.backend.config.UserDataLoader  : Starting initial data load from external API
-2025-06-04 16:07:09.790 DEBUG 25564 --- [main] c.example.backend.config.UserDataLoader  : Fetching data from URL: https://dummyjson.com/users
-2025-06-04 16:07:10.613  INFO 25564 --- [main] c.example.backend.config.UserDataLoader  : Successfully retrieved user data from API
-2025-06-04 16:07:10.615  INFO 25564 --- [main] c.example.backend.config.UserDataLoader  : Processed 30 users from external API
-2025-06-04 16:07:10.634 DEBUG 25564 --- [main] c.example.backend.config.LoggingAspect   : Executing method: UserServiceImpl.saveAll
-2025-06-04 16:07:10.668  INFO 25564 --- [main] c.e.b.service.impl.UserServiceImpl       : Saving 30 users to database
-2025-06-04 16:07:10.825 DEBUG 25564 --- [main] c.e.b.service.impl.UserServiceImpl       : Successfully saved 30 users to database
-2025-06-04 16:07:10.825 DEBUG 25564 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserServiceImpl.saveAll executed in 189 ms
-2025-06-04 16:07:10.826  INFO 25564 --- [main] c.example.backend.config.UserDataLoader  : Successfully loaded all users into database
-2025-06-04 16:07:10.882  WARN 25564 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-04 16:07:11.314  INFO 25564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2025-06-04 16:07:11.325  INFO 25564 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 6.985 seconds (JVM running for 7.568)
-2025-06-04 16:07:11.328  INFO 25564 --- [main] com.example.backend.BackendApplication   : Backend Application started successfully
-2025-06-04 16:07:16.539  INFO 25564 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-04 16:07:16.541  INFO 25564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-04 16:07:16.544  INFO 25564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2025-06-04 16:07:16.569  INFO 25564 --- [http-nio-8080-exec-1] com.example.backend.config.LoggerConfig  : REQUEST [175c16c8-df7e-4391-9874-a6424b903cba] GET /api/users/1 from 0:0:0:0:0:0:0:1 - User-Agent: PostmanRuntime/7.44.0
-2025-06-04 16:07:16.599 DEBUG 25564 --- [http-nio-8080-exec-1] c.example.backend.config.LoggingAspect   : Executing method: UserController.getUserById
-2025-06-04 16:07:16.607  INFO 25564 --- [http-nio-8080-exec-1] c.e.backend.Controller.UserController    : REST request - Get user by ID: 1
-2025-06-04 16:07:16.608 DEBUG 25564 --- [http-nio-8080-exec-1] c.example.backend.config.LoggingAspect   : Executing method: UserServiceImpl.getUserById
-2025-06-04 16:07:16.608  INFO 25564 --- [http-nio-8080-exec-1] c.e.b.service.impl.UserServiceImpl       : Fetching user by ID: 1
-2025-06-04 16:07:16.638 DEBUG 25564 --- [http-nio-8080-exec-1] c.e.b.service.impl.UserServiceImpl       : User found with ID: 1
-2025-06-04 16:07:16.638 DEBUG 25564 --- [http-nio-8080-exec-1] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserServiceImpl.getUserById executed in 30 ms
-2025-06-04 16:07:16.638 DEBUG 25564 --- [http-nio-8080-exec-1] c.e.backend.Controller.UserController    : Found user with ID: 1
-2025-06-04 16:07:16.640 DEBUG 25564 --- [http-nio-8080-exec-1] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserController.getUserById executed in 40 ms
-2025-06-04 16:07:16.742  INFO 25564 --- [http-nio-8080-exec-1] com.example.backend.config.LoggerConfig  : RESPONSE [175c16c8-df7e-4391-9874-a6424b903cba] GET /api/users/1 - Status: 200
-2025-06-04 16:07:19.785  INFO 25564 --- [http-nio-8080-exec-3] com.example.backend.config.LoggerConfig  : REQUEST [6df4949d-bfaa-47e4-87a8-0ec17c9aa631] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: PostmanRuntime/7.44.0
-2025-06-04 16:07:19.788 DEBUG 25564 --- [http-nio-8080-exec-3] c.example.backend.config.LoggingAspect   : Executing method: UserController.getAllUsers
-2025-06-04 16:07:19.789  INFO 25564 --- [http-nio-8080-exec-3] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:07:19.790 DEBUG 25564 --- [http-nio-8080-exec-3] c.example.backend.config.LoggingAspect   : Executing method: UserServiceImpl.getAllUsers
-2025-06-04 16:07:19.791  INFO 25564 --- [http-nio-8080-exec-3] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
-2025-06-04 16:07:19.944 DEBUG 25564 --- [http-nio-8080-exec-3] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
-2025-06-04 16:07:19.945 DEBUG 25564 --- [http-nio-8080-exec-3] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserServiceImpl.getAllUsers executed in 154 ms
-2025-06-04 16:07:19.945 DEBUG 25564 --- [http-nio-8080-exec-3] c.e.backend.Controller.UserController    : Returning 30 users
-2025-06-04 16:07:19.945 DEBUG 25564 --- [http-nio-8080-exec-3] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserController.getAllUsers executed in 156 ms
-2025-06-04 16:07:19.957  INFO 25564 --- [http-nio-8080-exec-3] com.example.backend.config.LoggerConfig  : RESPONSE [6df4949d-bfaa-47e4-87a8-0ec17c9aa631] GET /api/users - Status: 200
-2025-06-04 16:21:36.212  INFO 22008 --- [main] c.e.b.c.UserControllerIntegrationTest    : Starting UserControllerIntegrationTest using Java 18.0.2 on Aman-PC with PID 22008 (started by amans in C:\Users\amans\Downloads\backend\backend)
-2025-06-04 16:21:36.215 DEBUG 22008 --- [main] c.e.b.c.UserControllerIntegrationTest    : Running with Spring Boot v2.7.18, Spring v5.3.31
-2025-06-04 16:21:36.216  INFO 22008 --- [main] c.e.b.c.UserControllerIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
-2025-06-04 16:21:37.421  INFO 22008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-04 16:21:37.572  INFO 22008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 1 JPA repository interfaces.
-2025-06-04 16:21:38.924  INFO 22008 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-04 16:21:39.259  INFO 22008 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-04 16:21:39.442  INFO 22008 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-04 16:21:39.648  INFO 22008 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2025-06-04 16:21:40.386  INFO 22008 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2025-06-04 16:21:40.906  INFO 22008 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2025-06-04 16:21:42.683  INFO 22008 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2025-06-04 16:21:42.760  INFO 22008 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-04 16:21:44.955  INFO 22008 --- [main] c.example.backend.config.UserDataLoader  : Starting initial data load from external API
-2025-06-04 16:21:44.956 DEBUG 22008 --- [main] c.example.backend.config.UserDataLoader  : Fetching data from URL: https://dummyjson.com/users
-2025-06-04 16:21:46.011  INFO 22008 --- [main] c.example.backend.config.UserDataLoader  : Successfully retrieved user data from API
-2025-06-04 16:21:46.012  INFO 22008 --- [main] c.example.backend.config.UserDataLoader  : Processing up to 30 users from external API
-2025-06-04 16:21:46.013  INFO 22008 --- [main] c.example.backend.config.UserDataLoader  : Processed 30 users from external API
-2025-06-04 16:21:46.029 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : Executing method: UserServiceImpl.saveAll
-2025-06-04 16:21:46.045  INFO 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Saving 30 users to database
-2025-06-04 16:21:46.294 DEBUG 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Successfully saved 30 users to database
-2025-06-04 16:21:46.295 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserServiceImpl.saveAll executed in 264 ms
-2025-06-04 16:21:46.295  INFO 22008 --- [main] c.example.backend.config.UserDataLoader  : Successfully loaded all users into database
-2025-06-04 16:21:46.999  WARN 22008 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-04 16:21:47.572  INFO 22008 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2025-06-04 16:21:48.565  INFO 22008 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-06-04 16:21:48.566  INFO 22008 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-06-04 16:21:48.568  INFO 22008 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2025-06-04 16:21:48.788  INFO 22008 --- [main] c.e.b.c.UserControllerIntegrationTest    : Started UserControllerIntegrationTest in 13.237 seconds (JVM running for 15.442)
-2025-06-04 16:21:49.353  INFO 22008 --- [main] com.example.backend.config.LoggerConfig  : REQUEST [66f73f93-3d06-44b5-91f6-79285d408bb3] GET /api/users/search from 127.0.0.1 - User-Agent: null
-2025-06-04 16:21:49.382 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : Executing method: UserController.searchUsers
-2025-06-04 16:21:49.390  INFO 22008 --- [main] c.e.backend.Controller.UserController    : REST request - Search users with keyword: John
-2025-06-04 16:21:49.390 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : Executing method: UserServiceImpl.searchUsers
-2025-06-04 16:21:49.391  INFO 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Searching users with keyword: John
-2025-06-04 16:21:49.432 DEBUG 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Found 1 users matching keyword: John
-2025-06-04 16:21:49.432 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserServiceImpl.searchUsers executed in 41 ms
-2025-06-04 16:21:49.433 DEBUG 22008 --- [main] c.e.backend.Controller.UserController    : Found 1 users matching search criteria
-2025-06-04 16:21:49.434 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserController.searchUsers executed in 51 ms
-2025-06-04 16:21:49.504  INFO 22008 --- [main] com.example.backend.config.LoggerConfig  : RESPONSE [66f73f93-3d06-44b5-91f6-79285d408bb3] GET /api/users/search - Status: 200
-2025-06-04 16:21:49.590  INFO 22008 --- [main] com.example.backend.config.LoggerConfig  : REQUEST [bac2f5b1-776f-422f-ad66-ecd5789307da] GET /api/users/99 from 127.0.0.1 - User-Agent: null
-2025-06-04 16:21:49.593 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : Executing method: UserController.getUserById
-2025-06-04 16:21:49.593  INFO 22008 --- [main] c.e.backend.Controller.UserController    : REST request - Get user by ID: 99
-2025-06-04 16:21:49.593 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : Executing method: UserServiceImpl.getUserById
-2025-06-04 16:21:49.594  INFO 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Fetching user by ID: 99
-2025-06-04 16:21:49.599 DEBUG 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : No user found with ID: 99
-2025-06-04 16:21:49.599 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserServiceImpl.getUserById executed in 5 ms
-2025-06-04 16:21:49.604 ERROR 22008 --- [main] c.e.backend.Controller.UserController    : Failed to find user with ID: 99
+2025-06-10 20:02:17.458  INFO 24516 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 11.0.26 on Aman-PC with PID 24516 (C:\Users\amans\Downloads\backend\backend\target\classes started by amans in C:\Users\amans\Downloads\backend\backend)
+2025-06-10 20:02:17.466 DEBUG 24516 --- [main] com.example.backend.BackendApplication   : Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-06-10 20:02:17.467  INFO 24516 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-10 20:02:18.658  INFO 24516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-10 20:02:18.748  INFO 24516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interfaces.
+2025-06-10 20:02:20.082  INFO 24516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-10 20:02:20.096  INFO 24516 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-10 20:02:20.097  INFO 24516 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-06-10 20:02:20.328  INFO 24516 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-10 20:02:20.329  INFO 24516 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2786 ms
+2025-06-10 20:02:20.393  INFO 24516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-10 20:02:20.845  INFO 24516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-10 20:02:20.870  INFO 24516 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-06-10 20:02:21.145  INFO 24516 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-10 20:02:21.268  INFO 24516 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-06-10 20:02:21.628  INFO 24516 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-06-10 20:02:21.867  INFO 24516 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-06-10 20:02:23.005  INFO 24516 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-10 20:02:23.020  INFO 24516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-10 20:02:23.824  INFO 24516 --- [main] c.example.backend.config.UserDataLoader  : Starting initial data load from external API
+2025-06-10 20:02:23.824 DEBUG 24516 --- [main] c.example.backend.config.UserDataLoader  : Fetching data from URL: https://dummyjson.com/users
+2025-06-10 20:02:24.799  INFO 24516 --- [main] c.example.backend.config.UserDataLoader  : Successfully retrieved user data from API
+2025-06-10 20:02:24.799  INFO 24516 --- [main] c.example.backend.config.UserDataLoader  : Processing up to 30 users from external API
+2025-06-10 20:02:24.800  INFO 24516 --- [main] c.example.backend.config.UserDataLoader  : Processed 30 users from external API
+2025-06-10 20:02:24.800  INFO 24516 --- [main] c.e.b.service.impl.UserServiceImpl       : Saving 30 users to database
+2025-06-10 20:02:25.086 DEBUG 24516 --- [main] c.e.b.service.impl.UserServiceImpl       : Successfully saved 30 users to database
+2025-06-10 20:02:25.086  INFO 24516 --- [main] c.example.backend.config.UserDataLoader  : Successfully loaded all users into database
+2025-06-10 20:02:25.140  WARN 24516 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-10 20:02:25.504  INFO 24516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-10 20:02:25.518  INFO 24516 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 8.873 seconds (JVM running for 9.716)
+2025-06-10 20:02:25.525  INFO 24516 --- [main] com.example.backend.BackendApplication   : Backend Application started successfully
+2025-06-10 20:03:26.600  INFO 24516 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-10 20:03:26.605  INFO 24516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-10 20:03:26.635  INFO 24516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 29 ms
+2025-06-10 20:03:26.702  INFO 24516 --- [http-nio-8080-exec-1] com.example.backend.config.LoggerConfig  : REQUEST [2b5fdee7-0993-40ca-b727-4da26d3799a3] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+2025-06-10 20:03:26.744  INFO 24516 --- [http-nio-8080-exec-1] c.e.backend.Controller.UserController    : REST request - Get all users
+2025-06-10 20:03:26.744  INFO 24516 --- [http-nio-8080-exec-1] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
+2025-06-10 20:03:27.113 DEBUG 24516 --- [http-nio-8080-exec-1] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
+2025-06-10 20:03:27.113 DEBUG 24516 --- [http-nio-8080-exec-1] c.e.backend.Controller.UserController    : Returning 30 users
+2025-06-10 20:03:27.282  INFO 24516 --- [http-nio-8080-exec-1] com.example.backend.config.LoggerConfig  : RESPONSE [2b5fdee7-0993-40ca-b727-4da26d3799a3] GET /api/users - Status: 200
+2025-06-10 20:03:27.381  INFO 24516 --- [http-nio-8080-exec-2] com.example.backend.config.LoggerConfig  : REQUEST [06789559-0e09-4cb4-927e-c1ba3a96c48c] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+2025-06-10 20:03:27.382  INFO 24516 --- [http-nio-8080-exec-2] c.e.backend.Controller.UserController    : REST request - Get all users
+2025-06-10 20:03:27.382  INFO 24516 --- [http-nio-8080-exec-2] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
+2025-06-10 20:03:27.392 DEBUG 24516 --- [http-nio-8080-exec-2] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
+2025-06-10 20:03:27.393 DEBUG 24516 --- [http-nio-8080-exec-2] c.e.backend.Controller.UserController    : Returning 30 users
+2025-06-10 20:03:27.401  INFO 24516 --- [http-nio-8080-exec-2] com.example.backend.config.LoggerConfig  : RESPONSE [06789559-0e09-4cb4-927e-c1ba3a96c48c] GET /api/users - Status: 200
+2025-06-10 20:03:50.579  INFO 24516 --- [http-nio-8080-exec-3] com.example.backend.config.LoggerConfig  : REQUEST [45f7f061-13f8-40eb-bc24-3cdb7a38b974] GET /api/users/search from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+2025-06-10 20:03:50.605  INFO 24516 --- [http-nio-8080-exec-3] c.e.backend.Controller.UserController    : REST request - Search users with keyword: emily
+2025-06-10 20:03:50.605  INFO 24516 --- [http-nio-8080-exec-3] c.e.b.service.impl.UserServiceImpl       : Searching users with keyword: emily
+2025-06-10 20:03:50.646 DEBUG 24516 --- [http-nio-8080-exec-3] c.e.b.service.impl.UserServiceImpl       : Found 1 users matching keyword: emily
+2025-06-10 20:03:50.646 DEBUG 24516 --- [http-nio-8080-exec-3] c.e.backend.Controller.UserController    : Found 1 users matching search criteria
+2025-06-10 20:03:50.647  INFO 24516 --- [http-nio-8080-exec-3] com.example.backend.config.LoggerConfig  : RESPONSE [45f7f061-13f8-40eb-bc24-3cdb7a38b974] GET /api/users/search - Status: 200
+2025-06-10 21:33:28.311  INFO 14288 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 11.0.26 on Aman-PC with PID 14288 (C:\Users\amans\Downloads\backend\backend\target\classes started by amans in C:\Users\amans\Downloads\backend\backend)
+2025-06-10 21:33:28.313 DEBUG 14288 --- [main] com.example.backend.BackendApplication   : Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-06-10 21:33:28.314  INFO 14288 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-10 21:33:29.566  INFO 14288 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-10 21:33:29.645  INFO 14288 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interfaces.
+2025-06-10 21:33:30.764  INFO 14288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-10 21:33:30.788  INFO 14288 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-10 21:33:30.789  INFO 14288 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-06-10 21:33:30.947  INFO 14288 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-10 21:33:30.947  INFO 14288 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2562 ms
+2025-06-10 21:33:30.988  INFO 14288 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-10 21:33:31.296  INFO 14288 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-10 21:33:31.309  INFO 14288 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-06-10 21:33:31.474  INFO 14288 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-10 21:33:31.552  INFO 14288 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-06-10 21:33:31.739  INFO 14288 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-06-10 21:33:31.926  INFO 14288 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-06-10 21:33:32.699  INFO 14288 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-10 21:33:32.708  INFO 14288 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-10 21:33:32.833  INFO 14288 --- [main] c.example.backend.config.UserDataLoader  : Starting initial data load from external API
+2025-06-10 21:33:32.833 DEBUG 14288 --- [main] c.example.backend.config.UserDataLoader  : Fetching data from URL: https://dummyjson.com/users
+2025-06-10 21:33:33.713  INFO 14288 --- [main] c.example.backend.config.UserDataLoader  : Successfully retrieved user data from API
+2025-06-10 21:33:33.713  INFO 14288 --- [main] c.example.backend.config.UserDataLoader  : Processing up to 30 users from external API
+2025-06-10 21:33:33.714  INFO 14288 --- [main] c.example.backend.config.UserDataLoader  : Processed 30 users from external API
+2025-06-10 21:33:33.714  INFO 14288 --- [main] c.e.b.service.impl.UserServiceImpl       : Saving 30 users to database
+2025-06-10 21:33:33.718 ERROR 14288 --- [main] c.e.b.service.impl.UserServiceImpl       : Error saving users to database
 
-java.util.NoSuchElementException: No value present
-	at java.base/java.util.Optional.orElseThrow(Optional.java:377) ~[na:na]
-	at com.example.backend.Controller.UserController.getUserById(UserController.java:57) ~[classes/:na]
-	at com.example.backend.Controller.UserController$$FastClassBySpringCGLIB$$f67f13ce.invoke(<generated>) ~[classes/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.31.jar:5.3.31]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792) ~[spring-aop-5.3.31.jar:5.3.31]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.31.jar:5.3.31]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762) ~[spring-aop-5.3.31.jar:5.3.31]
-	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-5.3.31.jar:5.3.31]
-	at com.example.backend.config.LoggingAspect.logMethodExecutionTime(LoggingAspect.java:31) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634) ~[spring-aop-5.3.31.jar:5.3.31]
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624) ~[spring-aop-5.3.31.jar:5.3.31]
-	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72) ~[spring-aop-5.3.31.jar:5.3.31]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.31.jar:5.3.31]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762) ~[spring-aop-5.3.31.jar:5.3.31]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.31.jar:5.3.31]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.31.jar:5.3.31]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762) ~[spring-aop-5.3.31.jar:5.3.31]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707) ~[spring-aop-5.3.31.jar:5.3.31]
-	at com.example.backend.Controller.UserController$$EnhancerBySpringCGLIB$$13230c33.getUserById(<generated>) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.31.jar:5.3.31]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.31.jar:5.3.31]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.31.jar:5.3.31]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.31.jar:5.3.31]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.31.jar:5.3.31]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.31.jar:5.3.31]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.31.jar:5.3.31]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.31.jar:5.3.31]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.31.jar:5.3.31]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.31.jar:5.3.31]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529) ~[tomcat-embed-core-9.0.83.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.31.jar:5.3.31]
-	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-5.3.31.jar:5.3.31]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.83.jar:4.0.FR]
-	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167) ~[spring-test-5.3.31.jar:5.3.31]
-	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.31.jar:5.3.31]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.31.jar:5.3.31]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.31.jar:5.3.31]
-	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.31.jar:5.3.31]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.31.jar:5.3.31]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.31.jar:5.3.31]
-	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.31.jar:5.3.31]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.31.jar:5.3.31]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.31.jar:5.3.31]
-	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.31.jar:5.3.31]
-	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201) ~[spring-test-5.3.31.jar:5.3.31]
-	at com.example.backend.controller.UserControllerIntegrationTest.getUserById_NonExistingId_ShouldReturnNotFound(UserControllerIntegrationTest.java:79) ~[test-classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725) ~[junit-platform-commons-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+java.lang.NullPointerException: null
+	at com.example.backend.service.impl.UserServiceImpl.saveAll(UserServiceImpl.java:81) ~[classes/:na]
+	at com.example.backend.config.UserDataLoader.loadData(UserDataLoader.java:82) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:929) ~[spring-context-5.3.31.jar:5.3.31]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591) ~[spring-context-5.3.31.jar:5.3.31]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.18.jar:2.7.18]
+	at com.example.backend.BackendApplication.main(BackendApplication.java:16) ~[classes/:na]
 
-2025-06-04 16:21:49.606 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserController.getUserById executed in 12 ms
-2025-06-04 16:21:49.608  INFO 22008 --- [main] com.example.backend.config.LoggerConfig  : RESPONSE [bac2f5b1-776f-422f-ad66-ecd5789307da] GET /api/users/99 - Status: 404
-2025-06-04 16:21:49.624  INFO 22008 --- [main] com.example.backend.config.LoggerConfig  : REQUEST [9af0acee-2a93-4cec-adee-8a62c4167bfa] GET /api/users/email from 127.0.0.1 - User-Agent: null
-2025-06-04 16:21:49.625 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : Executing method: UserController.getUserByEmail
-2025-06-04 16:21:49.626  INFO 22008 --- [main] c.e.backend.Controller.UserController    : REST request - Get user by email: john.doe@example.com
-2025-06-04 16:21:49.626 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : Executing method: UserServiceImpl.getUserByEmail
-2025-06-04 16:21:49.626  INFO 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Fetching user by email: john.doe@example.com
-2025-06-04 16:21:49.633 DEBUG 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : User found with email: john.doe@example.com
-2025-06-04 16:21:49.633 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserServiceImpl.getUserByEmail executed in 7 ms
-2025-06-04 16:21:49.633 DEBUG 22008 --- [main] c.e.backend.Controller.UserController    : Found user with email: john.doe@example.com
-2025-06-04 16:21:49.634 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserController.getUserByEmail executed in 7 ms
-2025-06-04 16:21:49.635  INFO 22008 --- [main] com.example.backend.config.LoggerConfig  : RESPONSE [9af0acee-2a93-4cec-adee-8a62c4167bfa] GET /api/users/email - Status: 200
-2025-06-04 16:21:49.651  INFO 22008 --- [main] com.example.backend.config.LoggerConfig  : REQUEST [13058111-62b9-4a6e-94f9-a7712f1fe48b] GET /api/users/1 from 127.0.0.1 - User-Agent: null
-2025-06-04 16:21:49.651 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : Executing method: UserController.getUserById
-2025-06-04 16:21:49.651  INFO 22008 --- [main] c.e.backend.Controller.UserController    : REST request - Get user by ID: 1
-2025-06-04 16:21:49.652 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : Executing method: UserServiceImpl.getUserById
-2025-06-04 16:21:49.652  INFO 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Fetching user by ID: 1
-2025-06-04 16:21:49.656 DEBUG 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : User found with ID: 1
-2025-06-04 16:21:49.656 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserServiceImpl.getUserById executed in 4 ms
-2025-06-04 16:21:49.656 DEBUG 22008 --- [main] c.e.backend.Controller.UserController    : Found user with ID: 1
-2025-06-04 16:21:49.656 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserController.getUserById executed in 4 ms
-2025-06-04 16:21:49.658  INFO 22008 --- [main] com.example.backend.config.LoggerConfig  : RESPONSE [13058111-62b9-4a6e-94f9-a7712f1fe48b] GET /api/users/1 - Status: 200
-2025-06-04 16:21:49.671  INFO 22008 --- [main] com.example.backend.config.LoggerConfig  : REQUEST [d8d57f07-a681-4038-8376-5d7856dde20b] GET /api/users from 127.0.0.1 - User-Agent: null
-2025-06-04 16:21:49.672 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : Executing method: UserController.getAllUsers
-2025-06-04 16:21:49.672  INFO 22008 --- [main] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:21:49.673 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : Executing method: UserServiceImpl.getAllUsers
-2025-06-04 16:21:49.673  INFO 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
-2025-06-04 16:21:49.675 DEBUG 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Retrieved 2 users from database
-2025-06-04 16:21:49.675 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserServiceImpl.getAllUsers executed in 2 ms
-2025-06-04 16:21:49.676 DEBUG 22008 --- [main] c.e.backend.Controller.UserController    : Returning 2 users
-2025-06-04 16:21:49.676 DEBUG 22008 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserController.getAllUsers executed in 3 ms
-2025-06-04 16:21:49.677  INFO 22008 --- [main] com.example.backend.config.LoggerConfig  : RESPONSE [d8d57f07-a681-4038-8376-5d7856dde20b] GET /api/users - Status: 200
-2025-06-04 16:21:49.851  INFO 22008 --- [main] c.e.backend.Controller.UserController    : REST request - Get user by ID: 99
-2025-06-04 16:21:49.856 ERROR 22008 --- [main] c.e.backend.Controller.UserController    : Failed to find user with ID: 99
+2025-06-10 21:33:33.719 ERROR 14288 --- [main] c.example.backend.config.UserDataLoader  : Error occurred while loading initial data
 
-java.util.NoSuchElementException: No value present
-	at java.base/java.util.Optional.orElseThrow(Optional.java:377) ~[na:na]
-	at com.example.backend.Controller.UserController.getUserById(UserController.java:57) ~[classes/:na]
-	at com.example.backend.controller.UserControllerTest.getUserById_NonExistingId_ShouldReturnNotFound(UserControllerTest.java:105) ~[test-classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725) ~[junit-platform-commons-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+java.lang.NullPointerException: null
+	at com.example.backend.service.impl.UserServiceImpl.saveAll(UserServiceImpl.java:81) ~[classes/:na]
+	at com.example.backend.config.UserDataLoader.loadData(UserDataLoader.java:82) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:929) ~[spring-context-5.3.31.jar:5.3.31]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591) ~[spring-context-5.3.31.jar:5.3.31]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.18.jar:2.7.18]
+	at com.example.backend.BackendApplication.main(BackendApplication.java:16) ~[classes/:na]
 
-2025-06-04 16:21:49.890  INFO 22008 --- [main] c.e.backend.Controller.UserController    : REST request - Get user by email: john.doe@example.com
-2025-06-04 16:21:49.890 DEBUG 22008 --- [main] c.e.backend.Controller.UserController    : Found user with email: john.doe@example.com
-2025-06-04 16:21:49.899  INFO 22008 --- [main] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:21:49.900 ERROR 22008 --- [main] c.e.backend.Controller.UserController    : Exception while retrieving all users
-
-java.lang.RuntimeException: Database connection failed
-	at com.example.backend.Controller.UserController.getAllUsers(UserController.java:25) ~[classes/:na]
-	at com.example.backend.controller.UserControllerTest.getAllUsers_WhenExceptionThrown_ShouldReturnInternalServerError(UserControllerTest.java:77) ~[test-classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725) ~[junit-platform-commons-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
-
-2025-06-04 16:21:49.910  INFO 22008 --- [main] c.e.backend.Controller.UserController    : REST request - Search users with keyword: John
-2025-06-04 16:21:49.913 DEBUG 22008 --- [main] c.e.backend.Controller.UserController    : Found 1 users matching search criteria
-2025-06-04 16:21:49.933  INFO 22008 --- [main] c.e.backend.Controller.UserController    : REST request - Get user by ID: 1
-2025-06-04 16:21:49.934 DEBUG 22008 --- [main] c.e.backend.Controller.UserController    : Found user with ID: 1
-2025-06-04 16:21:49.943  INFO 22008 --- [main] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:21:49.944 DEBUG 22008 --- [main] c.e.backend.Controller.UserController    : Returning 2 users
-2025-06-04 16:21:50.276  INFO 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Fetching user by email: john.doe@example.com
-2025-06-04 16:21:50.276 DEBUG 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : User found with email: john.doe@example.com
-2025-06-04 16:21:50.282  INFO 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Fetching user by ID: 99
-2025-06-04 16:21:50.282 DEBUG 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : No user found with ID: 99
-2025-06-04 16:21:50.319  INFO 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Searching users with keyword: John
-2025-06-04 16:21:50.325 DEBUG 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Found 1 users matching keyword: John
-2025-06-04 16:21:50.331  INFO 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Fetching user by ID: 1
-2025-06-04 16:21:50.332 DEBUG 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : User found with ID: 1
-2025-06-04 16:21:50.335  INFO 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
-2025-06-04 16:21:50.341 DEBUG 22008 --- [main] c.e.b.service.impl.UserServiceImpl       : Retrieved 2 users from database
-2025-06-04 16:21:50.691  INFO 22008 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-04 16:21:50.693  INFO 22008 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2025-06-04 16:21:50.893  INFO 22008 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-04 16:21:50.897  INFO 22008 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-04 16:30:26.266  INFO 20908 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 11.0.26 on Aman-PC with PID 20908 (C:\Users\amans\Downloads\backend\backend\target\classes started by amans in C:\Users\amans\Downloads\backend\backend)
-2025-06-04 16:30:26.267 DEBUG 20908 --- [main] com.example.backend.BackendApplication   : Running with Spring Boot v2.7.18, Spring v5.3.31
-2025-06-04 16:30:26.268  INFO 20908 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-06-04 16:30:27.300  INFO 20908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-04 16:30:27.368  INFO 20908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interfaces.
-2025-06-04 16:30:28.514  INFO 20908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2025-06-04 16:30:28.532  INFO 20908 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-04 16:30:28.532  INFO 20908 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-2025-06-04 16:30:28.817  INFO 20908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-04 16:30:28.817  INFO 20908 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2487 ms
-2025-06-04 16:30:28.872  INFO 20908 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-04 16:30:29.147  INFO 20908 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-04 16:30:29.169  INFO 20908 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2025-06-04 16:30:29.393  INFO 20908 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-04 16:30:29.456  INFO 20908 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2025-06-04 16:30:29.691  INFO 20908 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2025-06-04 16:30:29.863  INFO 20908 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2025-06-04 16:30:30.650  INFO 20908 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2025-06-04 16:30:30.672  INFO 20908 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-04 16:30:31.609  INFO 20908 --- [main] c.example.backend.config.UserDataLoader  : Starting initial data load from external API
-2025-06-04 16:30:31.609 DEBUG 20908 --- [main] c.example.backend.config.UserDataLoader  : Fetching data from URL: https://dummyjson.com/users
-2025-06-04 16:30:32.382  INFO 20908 --- [main] c.example.backend.config.UserDataLoader  : Successfully retrieved user data from API
-2025-06-04 16:30:32.383  INFO 20908 --- [main] c.example.backend.config.UserDataLoader  : Processing up to 30 users from external API
-2025-06-04 16:30:32.383  INFO 20908 --- [main] c.example.backend.config.UserDataLoader  : Processed 30 users from external API
-2025-06-04 16:30:32.387 DEBUG 20908 --- [main] c.example.backend.config.LoggingAspect   : Executing method: UserServiceImpl.saveAll
-2025-06-04 16:30:32.397  INFO 20908 --- [main] c.e.b.service.impl.UserServiceImpl       : Saving 30 users to database
-2025-06-04 16:30:32.581 DEBUG 20908 --- [main] c.e.b.service.impl.UserServiceImpl       : Successfully saved 30 users to database
-2025-06-04 16:30:32.581 DEBUG 20908 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserServiceImpl.saveAll executed in 193 ms
-2025-06-04 16:30:32.582  INFO 20908 --- [main] c.example.backend.config.UserDataLoader  : Successfully loaded all users into database
-2025-06-04 16:30:32.694  WARN 20908 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-04 16:30:33.263  INFO 20908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2025-06-04 16:30:33.276  INFO 20908 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 7.536 seconds (JVM running for 8.109)
-2025-06-04 16:30:33.280  INFO 20908 --- [main] com.example.backend.BackendApplication   : Backend Application started successfully
-2025-06-04 16:31:11.355  INFO 20908 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-04 16:31:11.356  INFO 20908 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-04 16:31:11.359  INFO 20908 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2025-06-04 16:31:11.385  INFO 20908 --- [http-nio-8080-exec-2] com.example.backend.config.LoggerConfig  : REQUEST [cd16b12d-54f3-4497-9531-e49e35ac9fe3] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: PostmanRuntime/7.44.0
-2025-06-04 16:31:11.397 DEBUG 20908 --- [http-nio-8080-exec-2] c.example.backend.config.LoggingAspect   : Executing method: UserController.getAllUsers
-2025-06-04 16:31:11.403  INFO 20908 --- [http-nio-8080-exec-2] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:31:11.404 DEBUG 20908 --- [http-nio-8080-exec-2] c.example.backend.config.LoggingAspect   : Executing method: UserServiceImpl.getAllUsers
-2025-06-04 16:31:11.404  INFO 20908 --- [http-nio-8080-exec-2] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
-2025-06-04 16:31:11.634 DEBUG 20908 --- [http-nio-8080-exec-2] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
-2025-06-04 16:31:11.634 DEBUG 20908 --- [http-nio-8080-exec-2] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserServiceImpl.getAllUsers executed in 230 ms
-2025-06-04 16:31:11.634 DEBUG 20908 --- [http-nio-8080-exec-2] c.e.backend.Controller.UserController    : Returning 30 users
-2025-06-04 16:31:11.648 DEBUG 20908 --- [http-nio-8080-exec-2] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserController.getAllUsers executed in 251 ms
-2025-06-04 16:31:11.769  INFO 20908 --- [http-nio-8080-exec-2] com.example.backend.config.LoggerConfig  : RESPONSE [cd16b12d-54f3-4497-9531-e49e35ac9fe3] GET /api/users - Status: 200
-2025-06-04 16:31:16.646  INFO 20908 --- [http-nio-8080-exec-3] com.example.backend.config.LoggerConfig  : REQUEST [b7678fd3-ea90-4aa3-8338-0ed83acdc763] GET /api/users/5 from 0:0:0:0:0:0:0:1 - User-Agent: PostmanRuntime/7.44.0
-2025-06-04 16:31:16.654 DEBUG 20908 --- [http-nio-8080-exec-3] c.example.backend.config.LoggingAspect   : Executing method: UserController.getUserById
-2025-06-04 16:31:16.654  INFO 20908 --- [http-nio-8080-exec-3] c.e.backend.Controller.UserController    : REST request - Get user by ID: 5
-2025-06-04 16:31:16.654 DEBUG 20908 --- [http-nio-8080-exec-3] c.example.backend.config.LoggingAspect   : Executing method: UserServiceImpl.getUserById
-2025-06-04 16:31:16.654  INFO 20908 --- [http-nio-8080-exec-3] c.e.b.service.impl.UserServiceImpl       : Fetching user by ID: 5
-2025-06-04 16:31:16.661 DEBUG 20908 --- [http-nio-8080-exec-3] c.e.b.service.impl.UserServiceImpl       : User found with ID: 5
-2025-06-04 16:31:16.661 DEBUG 20908 --- [http-nio-8080-exec-3] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserServiceImpl.getUserById executed in 7 ms
-2025-06-04 16:31:16.661 DEBUG 20908 --- [http-nio-8080-exec-3] c.e.backend.Controller.UserController    : Found user with ID: 5
-2025-06-04 16:31:16.662 DEBUG 20908 --- [http-nio-8080-exec-3] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserController.getUserById executed in 7 ms
-2025-06-04 16:31:16.666  INFO 20908 --- [http-nio-8080-exec-3] com.example.backend.config.LoggerConfig  : RESPONSE [b7678fd3-ea90-4aa3-8338-0ed83acdc763] GET /api/users/5 - Status: 200
-2025-06-04 16:31:46.618  INFO 23724 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 11.0.26 on Aman-PC with PID 23724 (C:\Users\amans\Downloads\backend\backend\target\classes started by amans in C:\Users\amans\Downloads\backend\backend)
-2025-06-04 16:31:46.620 DEBUG 23724 --- [main] com.example.backend.BackendApplication   : Running with Spring Boot v2.7.18, Spring v5.3.31
-2025-06-04 16:31:46.621  INFO 23724 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-06-04 16:31:47.897  INFO 23724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-04 16:31:47.995  INFO 23724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 1 JPA repository interfaces.
-2025-06-04 16:31:49.818  INFO 23724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2025-06-04 16:31:49.848  INFO 23724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-04 16:31:49.849  INFO 23724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-2025-06-04 16:31:50.092  INFO 23724 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-04 16:31:50.092  INFO 23724 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3396 ms
-2025-06-04 16:31:50.171  INFO 23724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-04 16:31:51.306  INFO 23724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-04 16:31:51.342  INFO 23724 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2025-06-04 16:31:52.079  INFO 23724 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-04 16:31:52.387  INFO 23724 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2025-06-04 16:31:53.293  INFO 23724 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2025-06-04 16:31:53.549  INFO 23724 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2025-06-04 16:31:55.023  INFO 23724 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2025-06-04 16:31:55.047  INFO 23724 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-04 16:31:58.056  INFO 23724 --- [main] c.example.backend.config.UserDataLoader  : Starting initial data load from external API
-2025-06-04 16:31:58.057 DEBUG 23724 --- [main] c.example.backend.config.UserDataLoader  : Fetching data from URL: https://dummyjson.com/users
-2025-06-04 16:31:59.634  INFO 23724 --- [main] c.example.backend.config.UserDataLoader  : Successfully retrieved user data from API
-2025-06-04 16:31:59.635  INFO 23724 --- [main] c.example.backend.config.UserDataLoader  : Processing up to 30 users from external API
-2025-06-04 16:31:59.635  INFO 23724 --- [main] c.example.backend.config.UserDataLoader  : Processed 30 users from external API
-2025-06-04 16:31:59.644 DEBUG 23724 --- [main] c.example.backend.config.LoggingAspect   : Executing method: UserServiceImpl.saveAll
-2025-06-04 16:31:59.667  INFO 23724 --- [main] c.e.b.service.impl.UserServiceImpl       : Saving 30 users to database
-2025-06-04 16:32:00.448 DEBUG 23724 --- [main] c.e.b.service.impl.UserServiceImpl       : Successfully saved 30 users to database
-2025-06-04 16:32:00.448 DEBUG 23724 --- [main] c.example.backend.config.LoggingAspect   : PERFORMANCE: UserServiceImpl.saveAll executed in 803 ms
-2025-06-04 16:32:00.449  INFO 23724 --- [main] c.example.backend.config.UserDataLoader  : Successfully loaded all users into database
-2025-06-04 16:32:00.652  WARN 23724 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-04 16:32:02.948  INFO 23724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2025-06-04 16:32:02.975  INFO 23724 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 17.317 seconds (JVM running for 17.982)
-2025-06-04 16:32:03.029  INFO 23724 --- [main] com.example.backend.BackendApplication   : Backend Application started successfully
-2025-06-04 16:33:01.280  INFO 18260 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 11.0.26 on Aman-PC with PID 18260 (C:\Users\amans\Downloads\backend\backend\target\classes started by amans in C:\Users\amans\Downloads\backend\backend)
-2025-06-04 16:33:01.282 DEBUG 18260 --- [main] com.example.backend.BackendApplication   : Running with Spring Boot v2.7.18, Spring v5.3.31
-2025-06-04 16:33:01.283  INFO 18260 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-06-04 16:33:02.376  INFO 18260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-04 16:33:02.469  INFO 18260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 1 JPA repository interfaces.
-2025-06-04 16:33:03.577  INFO 18260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2025-06-04 16:33:03.588  INFO 18260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-04 16:33:03.589  INFO 18260 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-2025-06-04 16:33:03.745  INFO 18260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-04 16:33:03.745  INFO 18260 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2404 ms
-2025-06-04 16:33:03.777  INFO 18260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-04 16:33:04.052  INFO 18260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-04 16:33:04.069  INFO 18260 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2025-06-04 16:33:04.256  INFO 18260 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-04 16:33:04.363  INFO 18260 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2025-06-04 16:33:04.579  INFO 18260 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2025-06-04 16:33:04.755  INFO 18260 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2025-06-04 16:33:05.513  INFO 18260 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2025-06-04 16:33:05.525  INFO 18260 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-04 16:33:06.059  INFO 18260 --- [main] c.example.backend.config.UserDataLoader  : Starting initial data load from external API
-2025-06-04 16:33:06.060 DEBUG 18260 --- [main] c.example.backend.config.UserDataLoader  : Fetching data from URL: https://dummyjson.com/users
-2025-06-04 16:33:06.830  INFO 18260 --- [main] c.example.backend.config.UserDataLoader  : Successfully retrieved user data from API
-2025-06-04 16:33:06.832  INFO 18260 --- [main] c.example.backend.config.UserDataLoader  : Processing up to 30 users from external API
-2025-06-04 16:33:06.833  INFO 18260 --- [main] c.example.backend.config.UserDataLoader  : Processed 30 users from external API
-2025-06-04 16:33:06.834  INFO 18260 --- [main] c.e.b.service.impl.UserServiceImpl       : Saving 30 users to database
-2025-06-04 16:33:07.013 DEBUG 18260 --- [main] c.e.b.service.impl.UserServiceImpl       : Successfully saved 30 users to database
-2025-06-04 16:33:07.013  INFO 18260 --- [main] c.example.backend.config.UserDataLoader  : Successfully loaded all users into database
-2025-06-04 16:33:07.067  WARN 18260 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-04 16:33:07.548  INFO 18260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2025-06-04 16:33:07.566  INFO 18260 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 6.985 seconds (JVM running for 7.702)
-2025-06-04 16:33:07.570  INFO 18260 --- [main] com.example.backend.BackendApplication   : Backend Application started successfully
-2025-06-04 16:37:30.382  INFO 18260 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-04 16:37:30.389  INFO 18260 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-04 16:37:30.453  INFO 18260 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 64 ms
-2025-06-04 16:37:30.556  INFO 18260 --- [http-nio-8080-exec-2] com.example.backend.config.LoggerConfig  : REQUEST [dcecc833-fc3d-4410-bd9e-4fb6f161fa93] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
-2025-06-04 16:37:30.644  INFO 18260 --- [http-nio-8080-exec-2] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:37:30.645  INFO 18260 --- [http-nio-8080-exec-2] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
-2025-06-04 16:37:31.081 DEBUG 18260 --- [http-nio-8080-exec-2] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
-2025-06-04 16:37:31.081 DEBUG 18260 --- [http-nio-8080-exec-2] c.e.backend.Controller.UserController    : Returning 30 users
-2025-06-04 16:37:31.220  INFO 18260 --- [http-nio-8080-exec-2] com.example.backend.config.LoggerConfig  : RESPONSE [dcecc833-fc3d-4410-bd9e-4fb6f161fa93] GET /api/users - Status: 200
-2025-06-04 16:37:31.237  INFO 18260 --- [http-nio-8080-exec-1] com.example.backend.config.LoggerConfig  : REQUEST [1f0d8fb4-e75d-4758-a58e-538a73b28394] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
-2025-06-04 16:37:31.238  INFO 18260 --- [http-nio-8080-exec-1] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:37:31.239  INFO 18260 --- [http-nio-8080-exec-1] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
-2025-06-04 16:37:31.246 DEBUG 18260 --- [http-nio-8080-exec-1] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
-2025-06-04 16:37:31.247 DEBUG 18260 --- [http-nio-8080-exec-1] c.e.backend.Controller.UserController    : Returning 30 users
-2025-06-04 16:37:31.249  INFO 18260 --- [http-nio-8080-exec-1] com.example.backend.config.LoggerConfig  : RESPONSE [1f0d8fb4-e75d-4758-a58e-538a73b28394] GET /api/users - Status: 200
-2025-06-04 16:37:42.736  INFO 18260 --- [http-nio-8080-exec-3] com.example.backend.config.LoggerConfig  : REQUEST [8a58d8fb-ce68-4b05-9701-3de1377b9834] GET /api/users/search from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
-2025-06-04 16:37:42.785  INFO 18260 --- [http-nio-8080-exec-3] c.e.backend.Controller.UserController    : REST request - Search users with keyword: lily
-2025-06-04 16:37:42.785  INFO 18260 --- [http-nio-8080-exec-3] c.e.b.service.impl.UserServiceImpl       : Searching users with keyword: lily
-2025-06-04 16:37:42.836 DEBUG 18260 --- [http-nio-8080-exec-3] c.e.b.service.impl.UserServiceImpl       : Found 1 users matching keyword: lily
-2025-06-04 16:37:42.836 DEBUG 18260 --- [http-nio-8080-exec-3] c.e.backend.Controller.UserController    : Found 1 users matching search criteria
-2025-06-04 16:37:42.838  INFO 18260 --- [http-nio-8080-exec-3] com.example.backend.config.LoggerConfig  : RESPONSE [8a58d8fb-ce68-4b05-9701-3de1377b9834] GET /api/users/search - Status: 200
-2025-06-04 16:37:56.773  INFO 18260 --- [http-nio-8080-exec-6] com.example.backend.config.LoggerConfig  : REQUEST [81290bd3-9ea7-4a79-8184-5491b1bc08e9] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
-2025-06-04 16:37:56.774  INFO 18260 --- [http-nio-8080-exec-6] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:37:56.776  INFO 18260 --- [http-nio-8080-exec-6] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
-2025-06-04 16:37:56.785 DEBUG 18260 --- [http-nio-8080-exec-6] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
-2025-06-04 16:37:56.786 DEBUG 18260 --- [http-nio-8080-exec-6] c.e.backend.Controller.UserController    : Returning 30 users
-2025-06-04 16:37:56.789  INFO 18260 --- [http-nio-8080-exec-6] com.example.backend.config.LoggerConfig  : RESPONSE [81290bd3-9ea7-4a79-8184-5491b1bc08e9] GET /api/users - Status: 200
-2025-06-04 16:37:56.802  INFO 18260 --- [http-nio-8080-exec-7] com.example.backend.config.LoggerConfig  : REQUEST [0e996a74-f3cb-4411-87df-cf9835b7cb71] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
-2025-06-04 16:37:56.803  INFO 18260 --- [http-nio-8080-exec-7] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:37:56.804  INFO 18260 --- [http-nio-8080-exec-7] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
-2025-06-04 16:37:56.817 DEBUG 18260 --- [http-nio-8080-exec-7] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
-2025-06-04 16:37:56.817 DEBUG 18260 --- [http-nio-8080-exec-7] c.e.backend.Controller.UserController    : Returning 30 users
-2025-06-04 16:37:56.821  INFO 18260 --- [http-nio-8080-exec-7] com.example.backend.config.LoggerConfig  : RESPONSE [0e996a74-f3cb-4411-87df-cf9835b7cb71] GET /api/users - Status: 200
-2025-06-04 16:48:51.926  INFO 26444 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 11.0.26 on Aman-PC with PID 26444 (C:\Users\amans\Downloads\backend\backend\target\classes started by amans in C:\Users\amans\Downloads\backend\backend)
-2025-06-04 16:48:51.928 DEBUG 26444 --- [main] com.example.backend.BackendApplication   : Running with Spring Boot v2.7.18, Spring v5.3.31
-2025-06-04 16:48:51.930  INFO 26444 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-06-04 16:48:53.696  INFO 26444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-04 16:48:53.820  INFO 26444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interfaces.
-2025-06-04 16:48:55.221  INFO 26444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2025-06-04 16:48:55.241  INFO 26444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-04 16:48:55.241  INFO 26444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-2025-06-04 16:48:55.456  INFO 26444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-04 16:48:55.456  INFO 26444 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3364 ms
-2025-06-04 16:48:55.509  INFO 26444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-04 16:48:55.830  INFO 26444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-04 16:48:55.866  INFO 26444 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2025-06-04 16:48:56.052  INFO 26444 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-04 16:48:56.136  INFO 26444 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2025-06-04 16:48:56.414  INFO 26444 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2025-06-04 16:48:56.621  INFO 26444 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2025-06-04 16:48:57.433  INFO 26444 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2025-06-04 16:48:57.443  INFO 26444 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-04 16:48:58.081  INFO 26444 --- [main] c.example.backend.config.UserDataLoader  : Starting initial data load from external API
-2025-06-04 16:48:58.081 DEBUG 26444 --- [main] c.example.backend.config.UserDataLoader  : Fetching data from URL: https://dummyjson.com/users
-2025-06-04 16:48:58.948  INFO 26444 --- [main] c.example.backend.config.UserDataLoader  : Successfully retrieved user data from API
-2025-06-04 16:48:58.948  INFO 26444 --- [main] c.example.backend.config.UserDataLoader  : Processing up to 30 users from external API
-2025-06-04 16:48:58.949  INFO 26444 --- [main] c.example.backend.config.UserDataLoader  : Processed 30 users from external API
-2025-06-04 16:48:58.949  INFO 26444 --- [main] c.e.b.service.impl.UserServiceImpl       : Saving 30 users to database
-2025-06-04 16:48:59.098 DEBUG 26444 --- [main] c.e.b.service.impl.UserServiceImpl       : Successfully saved 30 users to database
-2025-06-04 16:48:59.098  INFO 26444 --- [main] c.example.backend.config.UserDataLoader  : Successfully loaded all users into database
-2025-06-04 16:48:59.137  WARN 26444 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-04 16:48:59.499  INFO 26444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2025-06-04 16:48:59.512  INFO 26444 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 9.035 seconds (JVM running for 10.226)
-2025-06-04 16:48:59.515  INFO 26444 --- [main] com.example.backend.BackendApplication   : Backend Application started successfully
-2025-06-04 16:52:10.751  INFO 26444 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-04 16:52:10.777  INFO 26444 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-04 16:52:11.256  INFO 26444 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 478 ms
-2025-06-04 16:52:12.148  INFO 26444 --- [http-nio-8080-exec-1] com.example.backend.config.LoggerConfig  : REQUEST [6d8212cc-f98f-4f20-bbfb-5dea306f66ca] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
-2025-06-04 16:52:12.329  INFO 26444 --- [http-nio-8080-exec-1] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:52:12.330  INFO 26444 --- [http-nio-8080-exec-1] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
-2025-06-04 16:52:13.038 DEBUG 26444 --- [http-nio-8080-exec-1] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
-2025-06-04 16:52:13.040 DEBUG 26444 --- [http-nio-8080-exec-1] c.e.backend.Controller.UserController    : Returning 30 users
-2025-06-04 16:52:13.543  INFO 26444 --- [http-nio-8080-exec-1] com.example.backend.config.LoggerConfig  : RESPONSE [6d8212cc-f98f-4f20-bbfb-5dea306f66ca] GET /api/users - Status: 200
-2025-06-04 16:52:13.578  INFO 26444 --- [http-nio-8080-exec-4] com.example.backend.config.LoggerConfig  : REQUEST [fe58cc31-98cf-48d6-be7b-12a4a27e9332] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
-2025-06-04 16:52:13.579  INFO 26444 --- [http-nio-8080-exec-4] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:52:13.582  INFO 26444 --- [http-nio-8080-exec-4] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
-2025-06-04 16:52:13.600 DEBUG 26444 --- [http-nio-8080-exec-4] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
-2025-06-04 16:52:13.601 DEBUG 26444 --- [http-nio-8080-exec-4] c.e.backend.Controller.UserController    : Returning 30 users
-2025-06-04 16:52:13.609  INFO 26444 --- [http-nio-8080-exec-4] com.example.backend.config.LoggerConfig  : RESPONSE [fe58cc31-98cf-48d6-be7b-12a4a27e9332] GET /api/users - Status: 200
-2025-06-04 16:52:48.188  INFO 26444 --- [http-nio-8080-exec-5] com.example.backend.config.LoggerConfig  : REQUEST [137c4c5d-2a8d-42ea-9eb8-a8afcde6607e] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
-2025-06-04 16:52:48.190  INFO 26444 --- [http-nio-8080-exec-5] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:52:48.191  INFO 26444 --- [http-nio-8080-exec-5] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
-2025-06-04 16:52:48.201 DEBUG 26444 --- [http-nio-8080-exec-5] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
-2025-06-04 16:52:48.201 DEBUG 26444 --- [http-nio-8080-exec-5] c.e.backend.Controller.UserController    : Returning 30 users
-2025-06-04 16:52:48.212  INFO 26444 --- [http-nio-8080-exec-5] com.example.backend.config.LoggerConfig  : RESPONSE [137c4c5d-2a8d-42ea-9eb8-a8afcde6607e] GET /api/users - Status: 200
-2025-06-04 16:52:48.223  INFO 26444 --- [http-nio-8080-exec-8] com.example.backend.config.LoggerConfig  : REQUEST [f7549eda-9288-4a6f-961b-06b601857789] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
-2025-06-04 16:52:48.224  INFO 26444 --- [http-nio-8080-exec-8] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:52:48.224  INFO 26444 --- [http-nio-8080-exec-8] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
-2025-06-04 16:52:48.230 DEBUG 26444 --- [http-nio-8080-exec-8] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
-2025-06-04 16:52:48.230 DEBUG 26444 --- [http-nio-8080-exec-8] c.e.backend.Controller.UserController    : Returning 30 users
-2025-06-04 16:52:48.232  INFO 26444 --- [http-nio-8080-exec-8] com.example.backend.config.LoggerConfig  : RESPONSE [f7549eda-9288-4a6f-961b-06b601857789] GET /api/users - Status: 200
-2025-06-04 16:56:12.554  INFO 11284 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 11.0.26 on Aman-PC with PID 11284 (C:\Users\amans\Downloads\backend\backend\target\classes started by amans in C:\Users\amans\Downloads\backend\backend)
-2025-06-04 16:56:12.560 DEBUG 11284 --- [main] com.example.backend.BackendApplication   : Running with Spring Boot v2.7.18, Spring v5.3.31
-2025-06-04 16:56:12.562  INFO 11284 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-06-04 16:56:15.750  INFO 11284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-04 16:56:15.967  INFO 11284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 197 ms. Found 1 JPA repository interfaces.
-2025-06-04 16:56:19.200  INFO 11284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2025-06-04 16:56:19.241  INFO 11284 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-04 16:56:19.242  INFO 11284 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-2025-06-04 16:56:19.832  INFO 11284 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-04 16:56:19.832  INFO 11284 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6892 ms
-2025-06-04 16:56:19.959  INFO 11284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-04 16:56:21.304  INFO 11284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-04 16:56:21.349  INFO 11284 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2025-06-04 16:56:22.218  INFO 11284 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-04 16:56:22.428  INFO 11284 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2025-06-04 16:56:23.110  INFO 11284 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2025-06-04 16:56:23.423  INFO 11284 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2025-06-04 16:56:25.163  INFO 11284 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2025-06-04 16:56:25.199  INFO 11284 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-04 16:56:26.531  INFO 11284 --- [main] c.example.backend.config.UserDataLoader  : Starting initial data load from external API
-2025-06-04 16:56:26.531 DEBUG 11284 --- [main] c.example.backend.config.UserDataLoader  : Fetching data from URL: https://dummyjson.com/users
-2025-06-04 16:56:27.945  INFO 11284 --- [main] c.example.backend.config.UserDataLoader  : Successfully retrieved user data from API
-2025-06-04 16:56:27.946  INFO 11284 --- [main] c.example.backend.config.UserDataLoader  : Processing up to 30 users from external API
-2025-06-04 16:56:27.947  INFO 11284 --- [main] c.example.backend.config.UserDataLoader  : Processed 30 users from external API
-2025-06-04 16:56:27.947  INFO 11284 --- [main] c.e.b.service.impl.UserServiceImpl       : Saving 30 users to database
-2025-06-04 16:56:28.608 DEBUG 11284 --- [main] c.e.b.service.impl.UserServiceImpl       : Successfully saved 30 users to database
-2025-06-04 16:56:28.608  INFO 11284 --- [main] c.example.backend.config.UserDataLoader  : Successfully loaded all users into database
-2025-06-04 16:56:28.682  WARN 11284 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-04 16:56:29.245  INFO 11284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2025-06-04 16:56:29.266  INFO 11284 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 19.69 seconds (JVM running for 21.411)
-2025-06-04 16:56:29.271  INFO 11284 --- [main] com.example.backend.BackendApplication   : Backend Application started successfully
-2025-06-04 16:56:30.673  INFO 11284 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-04 16:56:30.675  INFO 11284 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-04 16:56:30.676  INFO 11284 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-06-04 16:56:30.696  INFO 11284 --- [http-nio-8080-exec-1] com.example.backend.config.LoggerConfig  : REQUEST [2eabdcc2-1595-4f18-971d-6eea566554f1] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
-2025-06-04 16:56:30.708  INFO 11284 --- [http-nio-8080-exec-1] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:56:30.709  INFO 11284 --- [http-nio-8080-exec-1] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
-2025-06-04 16:56:30.840 DEBUG 11284 --- [http-nio-8080-exec-1] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
-2025-06-04 16:56:30.840 DEBUG 11284 --- [http-nio-8080-exec-1] c.e.backend.Controller.UserController    : Returning 30 users
-2025-06-04 16:56:30.916  INFO 11284 --- [http-nio-8080-exec-1] com.example.backend.config.LoggerConfig  : RESPONSE [2eabdcc2-1595-4f18-971d-6eea566554f1] GET /api/users - Status: 200
-2025-06-04 16:56:30.948  INFO 11284 --- [http-nio-8080-exec-4] com.example.backend.config.LoggerConfig  : REQUEST [1145d88e-2e49-4a96-811a-f4b838897bfe] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
-2025-06-04 16:56:30.949  INFO 11284 --- [http-nio-8080-exec-4] c.e.backend.Controller.UserController    : REST request - Get all users
-2025-06-04 16:56:30.949  INFO 11284 --- [http-nio-8080-exec-4] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
-2025-06-04 16:56:30.954 DEBUG 11284 --- [http-nio-8080-exec-4] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
-2025-06-04 16:56:30.954 DEBUG 11284 --- [http-nio-8080-exec-4] c.e.backend.Controller.UserController    : Returning 30 users
-2025-06-04 16:56:30.956  INFO 11284 --- [http-nio-8080-exec-4] com.example.backend.config.LoggerConfig  : RESPONSE [1145d88e-2e49-4a96-811a-f4b838897bfe] GET /api/users - Status: 200
-2025-06-04 16:56:43.011  INFO 11284 --- [http-nio-8080-exec-5] com.example.backend.config.LoggerConfig  : REQUEST [bb719e93-7f31-484f-a60d-8c12ee5c371d] GET /api/users/search from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
-2025-06-04 16:56:43.037  INFO 11284 --- [http-nio-8080-exec-5] c.e.backend.Controller.UserController    : REST request - Search users with keyword: emma
-2025-06-04 16:56:43.038  INFO 11284 --- [http-nio-8080-exec-5] c.e.b.service.impl.UserServiceImpl       : Searching users with keyword: emma
-2025-06-04 16:56:43.087 DEBUG 11284 --- [http-nio-8080-exec-5] c.e.b.service.impl.UserServiceImpl       : Found 1 users matching keyword: emma
-2025-06-04 16:56:43.088 DEBUG 11284 --- [http-nio-8080-exec-5] c.e.backend.Controller.UserController    : Found 1 users matching search criteria
-2025-06-04 16:56:43.089  INFO 11284 --- [http-nio-8080-exec-5] com.example.backend.config.LoggerConfig  : RESPONSE [bb719e93-7f31-484f-a60d-8c12ee5c371d] GET /api/users/search - Status: 200
-2025-06-04 17:01:04.662  INFO 11284 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-04 17:01:04.678  INFO 11284 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2025-06-04 17:01:04.716  INFO 11284 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-04 17:01:04.726  INFO 11284 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-10 21:33:33.758  WARN 14288 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-10 21:33:34.468  INFO 14288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-10 21:33:34.481  INFO 14288 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 6.747 seconds (JVM running for 7.348)
+2025-06-10 21:33:34.485  INFO 14288 --- [main] com.example.backend.BackendApplication   : Backend Application started successfully
+2025-06-10 21:34:09.748  INFO 19624 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 11.0.26 on Aman-PC with PID 19624 (C:\Users\amans\Downloads\backend\backend\target\classes started by amans in C:\Users\amans\Downloads\backend\backend)
+2025-06-10 21:34:09.749 DEBUG 19624 --- [main] com.example.backend.BackendApplication   : Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-06-10 21:34:09.750  INFO 19624 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-10 21:34:10.870  INFO 19624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-10 21:34:10.974  INFO 19624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interfaces.
+2025-06-10 21:34:12.164  INFO 19624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-10 21:34:12.173  INFO 19624 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-10 21:34:12.173  INFO 19624 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-06-10 21:34:12.281  INFO 19624 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-10 21:34:12.281  INFO 19624 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2474 ms
+2025-06-10 21:34:12.312  INFO 19624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-10 21:34:12.582  INFO 19624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-10 21:34:12.595  INFO 19624 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-06-10 21:34:12.748  INFO 19624 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-10 21:34:12.800  INFO 19624 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-06-10 21:34:12.976  INFO 19624 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-06-10 21:34:13.137  INFO 19624 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-06-10 21:34:13.781  INFO 19624 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-10 21:34:13.792  INFO 19624 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-10 21:34:14.283  INFO 19624 --- [main] c.example.backend.config.UserDataLoader  : Starting initial data load from external API
+2025-06-10 21:34:14.283 DEBUG 19624 --- [main] c.example.backend.config.UserDataLoader  : Fetching data from URL: https://dummyjson.com/users
+2025-06-10 21:34:14.980  INFO 19624 --- [main] c.example.backend.config.UserDataLoader  : Successfully retrieved user data from API
+2025-06-10 21:34:14.980  INFO 19624 --- [main] c.example.backend.config.UserDataLoader  : Processing up to 30 users from external API
+2025-06-10 21:34:14.980  INFO 19624 --- [main] c.example.backend.config.UserDataLoader  : Processed 30 users from external API
+2025-06-10 21:34:14.981  INFO 19624 --- [main] c.e.b.service.impl.UserServiceImpl       : Saving 30 users to database
+2025-06-10 21:34:15.142 DEBUG 19624 --- [main] c.e.b.service.impl.UserServiceImpl       : Successfully saved 30 users to database
+2025-06-10 21:34:15.142  INFO 19624 --- [main] c.example.backend.config.UserDataLoader  : Successfully loaded all users into database
+2025-06-10 21:34:15.202  WARN 19624 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-10 21:34:15.601  INFO 19624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-10 21:34:15.609  INFO 19624 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 6.402 seconds (JVM running for 7.074)
+2025-06-10 21:34:15.612  INFO 19624 --- [main] com.example.backend.BackendApplication   : Backend Application started successfully
+2025-06-10 21:48:11.006  INFO 19624 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-10 21:48:11.014  INFO 19624 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-10 21:48:11.047  INFO 19624 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 33 ms
+2025-06-10 21:48:11.111  INFO 19624 --- [http-nio-8080-exec-2] com.example.backend.config.LoggerConfig  : REQUEST [23afd8ba-1552-4b56-bf9a-ef4bc0b10173] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+2025-06-10 21:48:11.165  INFO 19624 --- [http-nio-8080-exec-2] c.e.backend.Controller.UserController    : REST request - Get all users
+2025-06-10 21:48:11.166  INFO 19624 --- [http-nio-8080-exec-2] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
+2025-06-10 21:48:11.473 DEBUG 19624 --- [http-nio-8080-exec-2] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
+2025-06-10 21:48:11.473 DEBUG 19624 --- [http-nio-8080-exec-2] c.e.backend.Controller.UserController    : Returning 30 users
+2025-06-10 21:48:11.607  INFO 19624 --- [http-nio-8080-exec-2] com.example.backend.config.LoggerConfig  : RESPONSE [23afd8ba-1552-4b56-bf9a-ef4bc0b10173] GET /api/users - Status: 200
+2025-06-10 21:48:11.644  INFO 19624 --- [http-nio-8080-exec-1] com.example.backend.config.LoggerConfig  : REQUEST [aa2239f1-bab7-4205-98db-adfd65130215] GET /api/users from 0:0:0:0:0:0:0:1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+2025-06-10 21:48:11.645  INFO 19624 --- [http-nio-8080-exec-1] c.e.backend.Controller.UserController    : REST request - Get all users
+2025-06-10 21:48:11.645  INFO 19624 --- [http-nio-8080-exec-1] c.e.b.service.impl.UserServiceImpl       : Fetching all users from database
+2025-06-10 21:48:11.653 DEBUG 19624 --- [http-nio-8080-exec-1] c.e.b.service.impl.UserServiceImpl       : Retrieved 30 users from database
+2025-06-10 21:48:11.654 DEBUG 19624 --- [http-nio-8080-exec-1] c.e.backend.Controller.UserController    : Returning 30 users
+2025-06-10 21:48:11.657  INFO 19624 --- [http-nio-8080-exec-1] com.example.backend.config.LoggerConfig  : RESPONSE [aa2239f1-bab7-4205-98db-adfd65130215] GET /api/users - Status: 200

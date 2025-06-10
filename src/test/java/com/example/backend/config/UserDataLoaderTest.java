@@ -33,34 +33,28 @@ class UserDataLoaderTest {
 
     @Test
     void loadData_WithAutoloadEnabled_ShouldLoadUsers() {
-        // Set autoload to true for this test
+        
         config.getDatabase().setAutoloadData(true);
-        
-        // Act
+
         userDataLoader.loadData();
-        
-        // Verify
+
         verify(userService, times(1)).saveAll(usersCaptor.capture());
-        
+
         List<User> capturedUsers = usersCaptor.getValue();
         assertNotNull(capturedUsers);
         assertFalse(capturedUsers.isEmpty());
-        
-        // Verify it respects max records setting
+
         int maxRecords = config.getDatabase().getMaxRecords();
-        assertTrue(capturedUsers.size() <= maxRecords, 
+        assertTrue(capturedUsers.size() <= maxRecords,
                 "Number of loaded users should be <= max records config value");
     }
-    
+
     @Test
     void loadData_WithAutoloadDisabled_ShouldNotLoadUsers() {
-        // Set autoload to false for this test
         config.getDatabase().setAutoloadData(false);
-        
-        // Act
+
         userDataLoader.loadData();
-        
-        // Verify
+
         verify(userService, never()).saveAll(any());
     }
 }

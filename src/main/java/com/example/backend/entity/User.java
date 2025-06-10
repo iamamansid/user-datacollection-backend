@@ -51,7 +51,9 @@ public class User {
 
     public void setSsn(String ssn) {
         this.ssn = ssn;
-    }    private String maidenName;
+    }
+
+    private String maidenName;
     
     @NotBlank(message = "Email cannot be blank")
     @Email(message = "Email should be valid")

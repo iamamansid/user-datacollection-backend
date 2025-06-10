@@ -27,7 +27,6 @@ public class UserControllerIntegrationTest {
     void setUp() {
         userRepository.deleteAll();
 
-        // Create test users and save to repository
         User user1 = new User();
         user1.setId(1L);
         user1.setFirstName("John");

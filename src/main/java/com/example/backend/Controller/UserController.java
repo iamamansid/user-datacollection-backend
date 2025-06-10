@@ -19,7 +19,9 @@ import java.util.List;
 @CrossOrigin
 public class UserController {
     @Autowired
-    private UserService service;    @GetMapping
+    private UserService service;
+
+    @GetMapping
     public ResponseEntity<List<User>> getAllUsers() {
         log.info("REST request - Get all users");
         try {
@@ -35,7 +37,9 @@ public class UserController {
             log.error("Exception while retrieving all users", e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
-    }    @GetMapping("/search")
+    }
+
+    @GetMapping("/search")
     public ResponseEntity<List<User>> searchUsers(@RequestParam String q) {
         log.info("REST request - Search users with keyword: {}", q);
         try {
@@ -51,7 +55,9 @@ public class UserController {
             log.error("Exception while searching users with keyword: {}", q, e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
-    }@GetMapping("/{id}")
+    }
+
+    @GetMapping("/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id) {
         log.info("REST request - Get user by ID: {}", id);
         try {
@@ -66,7 +72,9 @@ public class UserController {
             log.error("Failed to find user with ID: {}", id, e);
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
-    }    @GetMapping("/email")
+    }
+
+    @GetMapping("/email")
     public ResponseEntity<User> getUserByEmail(@RequestParam String email) {
         log.info("REST request - Get user by email: {}", email);
         try {

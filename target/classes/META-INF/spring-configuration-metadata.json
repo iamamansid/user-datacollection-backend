@@ -23,31 +23,36 @@
       "name": "app.api.connection-timeout",
       "type": "java.lang.Integer",
       "description": "Connection timeout in milliseconds",
-      "sourceType": "com.example.backend.config.ApplicationConfig$Api"
+      "sourceType": "com.example.backend.config.ApplicationConfig$Api",
+      "defaultValue": 5000
     },
     {
       "name": "app.api.read-timeout",
       "type": "java.lang.Integer",
       "description": "Read timeout in milliseconds",
-      "sourceType": "com.example.backend.config.ApplicationConfig$Api"
+      "sourceType": "com.example.backend.config.ApplicationConfig$Api",
+      "defaultValue": 10000
     },
     {
       "name": "app.api.users-url",
       "type": "java.lang.String",
       "description": "Base URL for users API",
-      "sourceType": "com.example.backend.config.ApplicationConfig$Api"
+      "sourceType": "com.example.backend.config.ApplicationConfig$Api",
+      "defaultValue": "https:\/\/dummyjson.com\/users"
     },
     {
       "name": "app.database.autoload-data",
       "type": "java.lang.Boolean",
       "description": "Enable automatic loading of data on startup",
-      "sourceType": "com.example.backend.config.ApplicationConfig$Database"
+      "sourceType": "com.example.backend.config.ApplicationConfig$Database",
+      "defaultValue": false
     },
     {
       "name": "app.database.max-records",
       "type": "java.lang.Integer",
       "description": "Maximum number of records to load",
-      "sourceType": "com.example.backend.config.ApplicationConfig$Database"
+      "sourceType": "com.example.backend.config.ApplicationConfig$Database",
+      "defaultValue": 100
     }
   ],
   "hints": []

@@ -40,7 +40,7 @@ public class UserDataLoader {
     
     @PostConstruct
     public void loadData() {
-        // Skip loading if auto-loading is disabled
+
         if (!config.getDatabase().isAutoloadData()) {
             log.info("Auto-loading of data is disabled. Skipping initial data load.");
             return;
@@ -52,7 +52,8 @@ public class UserDataLoader {
         
         try {
             JsonNode root = restTemplate.getForObject(url, JsonNode.class);
-            List<User> users = new ArrayList<>();            if (root != null && root.has("users")) {
+            List<User> users = new ArrayList<>();
+            if (root != null && root.has("users")) {
                 log.info("Successfully retrieved user data from API");
                 
                 JsonNode usersNode = root.get("users");
@@ -74,7 +75,6 @@ public class UserDataLoader {
                         users.add(user);
                     } catch (Exception e) {
                         log.error("Error processing user from API: {}", node, e);
-                        // Continue processing other users
                     }
                 }
                 log.info("Processed {} users from external API", users.size());

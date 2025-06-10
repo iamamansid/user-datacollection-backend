@@ -11,9 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
-/**
- * Configuration class for global logging capabilities
- */
+
 @Configuration
 public class LoggerConfig implements WebMvcConfigurer {
 
@@ -24,11 +22,10 @@ public class LoggerConfig implements WebMvcConfigurer {
         registry.addInterceptor(new RequestLoggingInterceptor());
     }
 
-    /**
-     * Interceptor to log incoming HTTP requests
-     */
+
     private static class RequestLoggingInterceptor extends HandlerInterceptorAdapter {
-          @Override
+
+        @Override
         public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
             try {
                 String requestId = UUID.randomUUID().toString();
@@ -45,10 +42,11 @@ public class LoggerConfig implements WebMvcConfigurer {
                 return true;
             } catch (Exception e) {
                 log.error("Error in request logging interceptor", e);
-                return true; // Still allow request to proceed
+                return true;
             }
         }
-          @Override
+
+        @Override
         public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
             try {
                 String requestId = (String) request.getAttribute("requestId");

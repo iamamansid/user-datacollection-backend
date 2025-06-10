@@ -17,7 +17,9 @@ import java.util.Optional;
 @Slf4j
 public class UserServiceImpl implements UserService {
     @Autowired
-    private UserRepository repository;    public List<User> getAllUsers() {
+    private UserRepository repository;
+
+    public List<User> getAllUsers() {
         log.info("Fetching all users from database");
         try {
             List<User> users = repository.findAll();
@@ -27,7 +29,9 @@ public class UserServiceImpl implements UserService {
             log.error("Error retrieving all users from database", e);
             throw e;
         }
-    }    public List<User> searchUsers(String keyword) {
+    }
+
+    public List<User> searchUsers(String keyword) {
         log.info("Searching users with keyword: {}", keyword);
         try {
             List<User> users = repository.findByFirstNameContainingIgnoreCaseOrLastNameContainingIgnoreCaseOrSsnContainingIgnoreCase(keyword, keyword, keyword);
@@ -37,7 +41,9 @@ public class UserServiceImpl implements UserService {
             log.error("Error searching users with keyword: {}", keyword, e);
             throw e;
         }
-    }    public Optional<User> getUserById(Long id) {
+    }
+
+    public Optional<User> getUserById(Long id) {
         log.info("Fetching user by ID: {}", id);
         try {
             Optional<User> user = repository.findById(id);
@@ -51,7 +57,9 @@ public class UserServiceImpl implements UserService {
             log.error("Error fetching user with ID: {}", id, e);
             throw e;
         }
-    }    public Optional<User> getUserByEmail(String email) {
+    }
+
+    public Optional<User> getUserByEmail(String email) {
         log.info("Fetching user by email: {}", email);
         try {
             Optional<User> user = repository.findByEmail(email);
@@ -65,7 +73,9 @@ public class UserServiceImpl implements UserService {
             log.error("Error fetching user with email: {}", email, e);
             throw e;
         }
-    }    public void saveAll(List<User> users) {
+    }
+
+    public void saveAll(List<User> users) {
         log.info("Saving {} users to database", users.size());
         try {
             repository.saveAll(users);

@@ -35,7 +35,7 @@ public class UserControllerTest {
 
     @BeforeEach
     void setUp() {
-        // Create test users
+        
         testUser1 = new User();
         testUser1.setId(1L);
         testUser1.setFirstName("John");
@@ -55,11 +55,11 @@ public class UserControllerTest {
 
     @Test
     void getAllUsers_ShouldReturnAllUsers() {
-        // Arrange
+        
         when(userService.getAllUsers()).thenReturn(userList);
 
-        // Act
-        ResponseEntity<List<User>> response = userController.getAllUsers();        // Assert
+        
+        ResponseEntity<List<User>> response = userController.getAllUsers();        
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
         assertEquals(2, response.getBody().size());
@@ -68,26 +68,26 @@ public class UserControllerTest {
 
     @Test
     void getAllUsers_WhenExceptionThrown_ShouldReturnInternalServerError() {
-        // Arrange
+        
         when(userService.getAllUsers()).thenThrow(new RuntimeException("Database connection failed"));
 
-        // Act
+        
         ResponseEntity<List<User>> response = userController.getAllUsers();
 
-        // Assert
+        
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
         verify(userService, times(1)).getAllUsers();
     }
 
     @Test
     void getUserById_ExistingId_ShouldReturnUser() {
-        // Arrange
+        
         when(userService.getUserById(1L)).thenReturn(Optional.of(testUser1));
 
-        // Act
+        
         ResponseEntity<User> response = userController.getUserById(1L);
 
-        // Assert
+        
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
         assertEquals(1L, response.getBody().getId());
@@ -96,27 +96,27 @@ public class UserControllerTest {
 
     @Test
     void getUserById_NonExistingId_ShouldReturnNotFound() {
-        // Arrange
+        
         when(userService.getUserById(99L)).thenReturn(Optional.empty());
 
-        // Act
+        
         ResponseEntity<User> response = userController.getUserById(99L);
 
-        // Assert
+        
         assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
         verify(userService, times(1)).getUserById(99L);
     }
 
     @Test
     void getUserByEmail_ExistingEmail_ShouldReturnUser() {
-        // Arrange
+        
         String email = "john.doe@example.com";
         when(userService.getUserByEmail(email)).thenReturn(Optional.of(testUser1));
 
-        // Act
+        
         ResponseEntity<User> response = userController.getUserByEmail(email);
 
-        // Assert
+        
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
         assertEquals(email, response.getBody().getEmail());
@@ -125,14 +125,14 @@ public class UserControllerTest {
 
     @Test
     void searchUsers_ShouldReturnMatchingUsers() {
-        // Arrange
+        
         String keyword = "John";
         when(userService.searchUsers(keyword)).thenReturn(Arrays.asList(testUser1));
 
-        // Act
+        
         ResponseEntity<List<User>> response = userController.searchUsers(keyword);
 
-        // Assert
+        
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
         assertEquals(1, response.getBody().size());
